@@ -193,6 +193,6 @@ if __name__ == "__main__":
     bot.remove_webhook()
     time.sleep(1) """
     
-    bot.set_webhook(url = "https://telegram-jumo-bot.onrender.com")
+    bot.set_webhook(url = "https://wa-jumo-render.onrender.com")
     #web_server.run(host="0.0.0.0", port=5000)
-    serve(web_server, host = "0.0.0.0", port = 1338)
+    serve(web_server, host = "0.0.0.0", port = 3030)
