@@ -1,0 +1,13 @@
+{
+    "apps": [
+      {
+        "name": "telegram_jumobot",
+        "script": "./jumo_bot.py",
+        "interpreter": "python3",
+        "env": {
+          "FLASK_ENV": "production",
+          "PORT": 1338
+        }
+      }
+    ]
+}

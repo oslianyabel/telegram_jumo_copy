@@ -1,0 +1,6 @@
+Curso/
+__pycache__/
+venv/
+.env
+voice_out.mp3
+voice_in.mp3
