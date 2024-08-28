@@ -9,7 +9,7 @@ import time
 
 load_dotenv()
 client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
-bot = telebot.TeleBot(os.getenv("TELEGRAM_TOKEN"))
+bot = telebot.TeleBot(os.getenv("BIBLE_TOKEN"))
 web_server = Flask(__name__)
 voice_msg_activated = {}
 voice = {}

@@ -3,7 +3,7 @@ import os, requests, telebot
 
 load_dotenv()
 
-TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
+TELEGRAM_TOKEN = os.getenv('BIBLE_TOKEN')
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
 def send_message(data):

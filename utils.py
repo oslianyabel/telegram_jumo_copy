@@ -5,7 +5,7 @@ import os, telebot
 
 load_dotenv()
 
-TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
+TELEGRAM_TOKEN = os.getenv('BIBLE_TOKEN')
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
 
