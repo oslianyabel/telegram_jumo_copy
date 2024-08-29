@@ -198,7 +198,7 @@ def reply_audio(message):
 if __name__ == "__main__":
     print("Iniciando Bot")
     
-    NGROK_TOKEN = os.getenv('NGROK_TOKEN')
+    """ NGROK_TOKEN = os.getenv('NGROK_TOKEN')
     conf.get_default().config_path = "./config_ngrok.yml"
     conf.get_default().region = "eu"
     ngrok.set_auth_token(NGROK_TOKEN)
@@ -207,8 +207,8 @@ if __name__ == "__main__":
     print(ngrok_url)
     bot.remove_webhook()
     time.sleep(1) 
-    bot.set_webhook(url = ngrok_url)
+    bot.set_webhook(url = ngrok_url) """
     
-    #bot.set_webhook(url = "https://wa-jumo-render.onrender.com")
+    bot.set_webhook(url = "https://wa-jumo-render.onrender.com")
     serve(web_server, host = "0.0.0.0", port = 3031)
     #web_server.run(host="0.0.0.0", port=5000)
