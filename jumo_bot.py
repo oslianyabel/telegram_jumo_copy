@@ -16,10 +16,10 @@ voice = {}
 
 @bot.message_handler(func = lambda message: "@Bible" in message.text and message.chat.type in ['group', 'supergroup'])
 def handle_message(message):
-    sms = f"El usuario {message.from_user.username} te ha mencionado en un grupo de telegram al que perteneces con el siguiente mensaje: {message.text[12:]}"
-    
     print("Bot mencionado!")
-    print(f"{message.from_user.username}: {message.text[12:]}")
+    print(f"{message.from_user.username}: {message.text}")
+    
+    sms = f"El usuario {message.from_user.username} te ha mencionado en un grupo de telegram al que perteneces con el siguiente mensaje: {message.text}"
     data = {
         "id": message.chat.id, 
         "message": sms
@@ -198,16 +198,17 @@ def reply_audio(message):
 if __name__ == "__main__":
     print("Iniciando Bot")
     
-    """ NGROK_TOKEN = os.getenv('NGROK_TOKEN')
+    NGROK_TOKEN = os.getenv('NGROK_TOKEN')
     conf.get_default().config_path = "./config_ngrok.yml"
     conf.get_default().region = "eu"
     ngrok.set_auth_token(NGROK_TOKEN)
-    ngrok_tunel = ngrok.connect(5000, bind_tls = True)
+    ngrok_tunel = ngrok.connect(3031, bind_tls = True)
     ngrok_url = ngrok_tunel.public_url
     print(ngrok_url)
     bot.remove_webhook()
-    time.sleep(1) """
+    time.sleep(1) 
+    bot.set_webhook(url = ngrok_url)
     
-    bot.set_webhook(url = "https://wa-jumo-render.onrender.com")
+    #bot.set_webhook(url = "https://wa-jumo-render.onrender.com")
+    serve(web_server, host = "0.0.0.0", port = 3031)
     #web_server.run(host="0.0.0.0", port=5000)
-    serve(web_server, host = "0.0.0.0", port = 3030)
